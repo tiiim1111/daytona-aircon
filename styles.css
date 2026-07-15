@@ -681,12 +681,49 @@ footer p {
 
   .hero {
     min-height: auto;
-    padding-top: 44px;
+    padding-top: 36px;
     background-attachment: scroll;
   }
 
   h1 {
-    font-size: clamp(2.7rem, 15vw, 4.5rem);
+    font-size: clamp(2.35rem, 11vw, 3.8rem);
+    line-height: 1;
+  }
+
+  .hero-lede {
+    margin-top: 18px;
+    font-size: clamp(1rem, 3.6vw, 1.16rem);
+    line-height: 1.5;
+  }
+
+  .hero-actions {
+    margin-top: 22px;
+  }
+
+  .section-heading h2,
+  .visit-card h2,
+  .final-cta h2,
+  .inquiry-copy h2 {
+    font-size: clamp(1.9rem, 8.5vw, 3rem);
+    line-height: 1.05;
+  }
+
+  .section-heading p:not(.eyebrow),
+  .visit-card p,
+  .inquiry-copy p,
+  .final-cta p {
+    font-size: 1rem;
+    line-height: 1.58;
+  }
+
+  .feature-section,
+  .faq-section,
+  .dark-showcase,
+  .visit-section,
+  .inquiry-section,
+  .final-cta {
+    padding-top: 58px;
+    padding-bottom: 58px;
   }
 
   .intro-strip,
@@ -708,7 +745,7 @@ footer p {
   }
 
   .product-device {
-    min-height: 330px;
+    min-height: 280px;
   }
 
   .map-frame {
@@ -740,11 +777,27 @@ footer p {
   }
 
   .hero-visual {
-    width: 128%;
-    margin-left: -14%;
+    width: 116%;
+    margin-left: -8%;
+    margin-bottom: -14px;
   }
 
   .section-heading {
     text-align: left;
+  }
+
+  .intro-strip strong,
+  .product-details h3,
+  .showcase-grid h3 {
+    font-size: 1.12rem;
+  }
+
+  .visit-card,
+  .inquiry-card {
+    padding: 22px;
+  }
+
+  .contact-grid a {
+    min-height: 92px;
   }
 }
