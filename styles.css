@@ -456,6 +456,21 @@ h1 {
   text-transform: uppercase;
 }
 
+.map-frame {
+  margin-top: 18px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--silver);
+  aspect-ratio: 16 / 7;
+}
+
+.map-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 .inquiry-section {
   display: grid;
   grid-template-columns: minmax(280px, 0.9fr) minmax(320px, 1fr);
@@ -694,6 +709,10 @@ footer p {
 
   .product-device {
     min-height: 330px;
+  }
+
+  .map-frame {
+    aspect-ratio: 4 / 3;
   }
 }
 
