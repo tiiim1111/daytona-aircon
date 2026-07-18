@@ -43,7 +43,6 @@ Current protections:
 - Hidden honeypot field
 - Minimum 2-second time-on-form check
 - 1,200-character message limit
-- 10-minute server-side rate limit per email or phone
 - 10-minute browser-side lock after successful submission
 
 When `google-apps-script-inquiries.js` changes, copy it into Apps Script and deploy a new version.

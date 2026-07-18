@@ -57,6 +57,6 @@ The current form includes:
 - A hidden honeypot field named `website`
 - A minimum 2-second time-on-form check
 - A 1,200-character message limit
-- A 10-minute rate limit per email or phone number
+- A 10-minute browser-side lock after successful submission
 
 If these rules change in `google-apps-script-inquiries.js`, deploy a new Apps Script version again.

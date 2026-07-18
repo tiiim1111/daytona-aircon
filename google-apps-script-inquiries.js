@@ -2,7 +2,6 @@ const SHEET_ID = "1d6OTFnZUGOtGobJI7qrwtpngeyM9WcngP9Zu_j1UkVw";
 const SHEET_NAME = "Inquiries";
 const MAX_MESSAGE_LENGTH = 1200;
 const MIN_FORM_SECONDS = 2;
-const RATE_LIMIT_SECONDS = 600;
 
 function doPost(event) {
   try {
@@ -90,24 +89,7 @@ function validateInquiry(params, timestamp) {
     return { ok: false, reason: "submitted_too_quickly" };
   }
 
-  const contactKey = normalizeKey(email || phone);
-  if (!contactKey) {
-    return { ok: false, reason: "missing_contact_key" };
-  }
-
-  const cache = CacheService.getScriptCache();
-  const rateKey = `inquiry-rate:${contactKey}`;
-
-  if (cache.get(rateKey)) {
-    return { ok: false, reason: "rate_limited" };
-  }
-
-  cache.put(rateKey, "1", RATE_LIMIT_SECONDS);
   return { ok: true };
-}
-
-function normalizeKey(value) {
-  return clean(value).toLowerCase().replace(/[^a-z0-9@.+-]/g, "");
 }
 
 function respond(payload) {
